@@ -1,0 +1,42 @@
+* Librarian
+
+Librarian is a simple, local, reading list curator, written in Clojure.
+
+** Features
+
+Librarian allows you to list the books you wish to read, to add to the
+list, and to remove a book from the list.  At present there is no
+difference between reading a book and removing a book from the list -
+they are logically the same task.
+
+Librarian is written as a CLI app, and has the following commands:
+
+- =librarian list= - list the books on the list
+- =librarian add <title>= - add a book to the list
+- =librarian remove <title>= - remove a book from the list
+
+At present the title is simply however you refer to the book, eg
+"SICP", "Lolita", "Seven Languages in Seven Weeks", "LAMTRACK Field
+Manual".  To remove a book you must exactly match the title.
+
+** Development
+
+This project uses the =clj= CLI to manage dependencies and run tests.
+Tests are written using Tests are written in
+[https://github.com/slagyr/speclj[Speclj]].  Run the tests with:
+
+#+begin_src shell
+clj -M:spec
+#+end_src
+
+A =flake.nix= file is provided for Nix users - running =nix develop=
+will provide a development environment configured with Java 21,
+Clojure 1.12, and Emacs with Cider.
+
+** Status
+
+Aspirational requirements described.
+
+** Todo
+
+- [ ] Write a failing test

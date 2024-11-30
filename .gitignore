@@ -1,0 +1,21 @@
+# Emacs temporary files
+*~
+\#*\#
+auto-save-list
+.\#*
+
+# Clojure
+.cpcache/
+.nrepl-port
+
+# Build artifacts
+/target/
+*.class
+
+# Editor/IDE files
+.idea/
+*.iml
+.DS_Store
+
+# Logs and crash reports
+hs_err_*.log
