@@ -17,11 +17,12 @@
         };
       in
       {
-        devShell = pkgs.mkShell {
+        devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             temurin-bin-21
             clojure
             clojure-lsp
+	    git
             
             ((emacsPackagesFor emacs29).emacsWithPackages (epkgs: [
               epkgs.cider
