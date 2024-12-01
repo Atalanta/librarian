@@ -24,10 +24,18 @@ Manual".  To remove a book you must exactly match the title.
 
 This project uses the =clj= CLI to manage dependencies and run tests.
 Tests are written using Tests are written in
-[[https://github.com/slagyr/speclj][Speclj]].  Run the tests with:
+[[https://github.com/slagyr/speclj][Speclj]].
+
+Run the tests with:
 
 #+begin_src shell
-clj -M:spec
+clj -M:test:spec
+#+end_src
+
+Autorun the tests with:
+
+#+begin_src shell
+clj -M:test:spec -a
 #+end_src
 
 A =flake.nix= file is provided for Nix users - running =nix develop=
